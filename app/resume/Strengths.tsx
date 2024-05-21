@@ -12,7 +12,7 @@ const Strengths = ({ strengths }: Props) => {
   return (
     <div>
       <Strength
-        icon={<TbAnalyzeFilled className="text-2xl text-gray-600 " />}
+        icon={<TbAnalyzeFilled />}
         title={"Problem-solving skills"}
         description={
           "Solved complex coding problems using React and Python resulting in faster application performance."
@@ -21,7 +21,7 @@ const Strengths = ({ strengths }: Props) => {
       <div className="w-full h-1 my-1 bg-gray-200" />
 
       <Strength
-        icon={<RiTeamFill className="text-2xl text-gray-600 " />}
+        icon={<RiTeamFill />}
         title={"Team player"}
         description={
           "Collaborated with cross-functional teams to develop and deliver high-quality products."
@@ -30,7 +30,7 @@ const Strengths = ({ strengths }: Props) => {
       <div className="w-full h-1 my-1 bg-gray-200" />
 
       <Strength
-        icon={<IoMdFlag className="text-2xl text-gray-600 " />}
+        icon={<IoMdFlag />}
         title={"Attention to detail"}
         description={
           "Ensured code quality and accuracy through rigorous testing and review processes."

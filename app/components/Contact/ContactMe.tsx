@@ -1,36 +1,35 @@
 import React, { useRef } from "react"
-import emailjs from "@emailjs/browser"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 type Props = {}
 
 const ContactMe = (props: Props) => {
-  const form: React.LegacyRef<HTMLFormElement> | undefined = useRef(null)
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  // const form: React.LegacyRef<HTMLFormElement> | undefined = useRef(null)
+  // const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
 
-    if (form.current !== null) {
-      emailjs
-        .sendForm(
-          "service_59jem1c",
-          "template_i9a5k7r",
-          form.current,
-          "mdrfscXu8XkH9OZWR"
-        )
-        .then(
-          (result) => {
-            console.log(result.text)
-            toast.success("Message sent")
-            if (form.current !== null) {
-              form.current.reset()
-            }
-          },
-          (error) => {
-            console.log(error.text)
-          }
-        )
-    }
-  }
+  //   if (form.current !== null) {
+  //     emailjs
+  //       .sendForm(
+  //         "service_59jem1c",
+  //         "template_i9a5k7r",
+  //         form.current,
+  //         "mdrfscXu8XkH9OZWR"
+  //       )
+  //       .then(
+  //         (result) => {
+  //           console.log(result.text)
+  //           toast.success("Message sent")
+  //           if (form.current !== null) {
+  //             form.current.reset()
+  //           }
+  //         },
+  //         (error) => {
+  //           console.log(error.text)
+  //         }
+  //       )
+  //   }
+  // }
   return (
     <div className=" h-screen flex flex-col text-center   max-w-7xl justify-evenly mx-auto items-center">
       <h3 className=" uppercase tracking-[20px] text-gray-500 text-2xl text-center">
@@ -42,8 +41,8 @@ const ContactMe = (props: Props) => {
         </h4>
         <form
           className="flex flex-col space-y-2 w-full "
-          ref={form}
-          onSubmit={sendEmail}>
+          // ref={form}
+        >
           <div className="flex flex-col gap-2 md:space-x-2 md:flex-row md:gap-0">
             <input className="formInput" type={"text"} placeholder="Name" />
             <input className="formInput" type={"text"} placeholder="Email" />
