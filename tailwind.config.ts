@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
+/** @type {import('tailwindcss').Config} */
 
 const config: Config = {
   content: [
@@ -15,6 +16,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [require("tailwind-scrollbar")],
+}
+export default config
